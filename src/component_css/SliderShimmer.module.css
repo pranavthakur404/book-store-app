@@ -1,0 +1,12 @@
+.shimmerContainer {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  width: 32%;
+  height: 200px;
+  background-color: rgb(222, 222, 222);
+}
