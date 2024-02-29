@@ -4,8 +4,10 @@ import styles from "../component_css/Header.module.css";
 import SearchBooks from "./SearchBooks";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useCartContext } from "../context/CartContext";
 
 const Header = () => {
+  const { cartList } = useCartContext();
   return (
     <header className={styles.header}>
       <Container>
@@ -21,7 +23,9 @@ const Header = () => {
             </p>
             <button className={styles.cartButton}>
               <FaShoppingCart className={styles.cartIcon} />
-              <span className={styles.cartCounting}>10</span>
+              {cartList.length > 0 && (
+                <span className={styles.cartCounting}>{cartList.length}</span>
+              )}
             </button>
             <button className="primary-btn">Sign in</button>
           </div>

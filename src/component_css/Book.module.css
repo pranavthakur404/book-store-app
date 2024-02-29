@@ -3,10 +3,20 @@
   background: #ffff;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.book:hover {
+  transform: scale(0.9);
 }
 
 .bookInfo {
   padding: 10px;
+}
+
+.bookInfo a {
+  text-decoration: none;
 }
 
 .book img {
@@ -14,9 +24,23 @@
 }
 
 .title {
-  text-decoration: underline;
+  color: #000;
+  font-size: 0.9rem;
 }
 
 .price {
   margin-top: 10px;
+  color: #000;
+  font-weight: 800;
+}
+
+.cartBtn {
+  padding: 5px 10px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  border: none;
+  color: #fff;
+  margin-top: 10px;
+  background: #4681f4;
+  cursor: pointer;
 }

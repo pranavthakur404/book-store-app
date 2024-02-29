@@ -24,6 +24,7 @@
   background-color: #f71302;
   border: none;
   color: white;
+  cursor: pointer;
 }
 
 .loading {

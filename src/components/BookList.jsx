@@ -16,8 +16,6 @@ const BookList = () => {
     `https://api.itbook.store/1.0/search/${searchTerm}/${pageNumber}`
   );
 
-  console.log(data);
-
   const handlePrevBtn = () => {
     if (pageNumber > 1) {
       setPageNumber(pageNumber - 1);
