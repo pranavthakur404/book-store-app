@@ -1,11 +1,12 @@
+import { Link } from "react-router-dom";
 import styles from "../component_css/Logo.module.css";
 import { FaBookOpen } from "react-icons/fa";
 
 const Logo = () => {
   return (
-    <div className={styles.logo}>
+    <Link to="/" className={styles.logo}>
       <FaBookOpen className={styles.bookIcon} /> Geek Books
-    </div>
+    </Link>
   );
 };
 

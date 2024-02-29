@@ -34,15 +34,12 @@ const Banner = () => {
           breakpoints={{
             640: {
               slidesPerView: 2,
-              spaceBetween: 20,
             },
             768: {
               slidesPerView: 3,
-              spaceBetween: 40,
             },
             1024: {
               slidesPerView: 4,
-              spaceBetween: 50,
             },
           }}
           modules={[Pagination]}
@@ -51,9 +48,8 @@ const Banner = () => {
           {data?.books.map((list) => {
             return (
               <SwiperSlide key={list.isbn13}>
-                <Link className={styles.box}>
+                <Link to={`/details/${list.isbn13}  `} className={styles.box}>
                   <img src={list.image} alt="Book" />
-                  <div className={styles.info}></div>
                 </Link>
               </SwiperSlide>
             );

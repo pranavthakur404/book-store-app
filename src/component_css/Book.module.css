@@ -1,0 +1,22 @@
+.book {
+  width: 100%;
+  background: #ffff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 10px;
+}
+
+.bookInfo {
+  padding: 10px;
+}
+
+.book img {
+  width: 100%;
+}
+
+.title {
+  text-decoration: underline;
+}
+
+.price {
+  margin-top: 10px;
+}

@@ -1,0 +1,51 @@
+.loadingContainer {
+  width: 100%;
+  text-align: center;
+}
+
+.detailsWrapper {
+  width: 100%;
+  display: flex;
+  padding: 5% 0%;
+  gap: 20px;
+}
+
+.imgContainer {
+  text-align: center;
+}
+
+.imgContainer img {
+  height: 300px;
+}
+
+.info p {
+  margin-bottom: 15px;
+}
+
+.info p > span {
+  font-weight: 800;
+}
+
+.imgContainer p {
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.buyBtn {
+  padding: 7px 15px;
+  background: #f71302;
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+}
+
+.cartBtn {
+  padding: 8px 15px;
+  background: green;
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  margin-inline: 10px;
+}

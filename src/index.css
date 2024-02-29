@@ -9,14 +9,13 @@
 
 body {
   font-size: 15px;
-  background-color: #fef4f4;
 }
 
 .primary-btn {
   padding: 8px 18px;
   border-radius: 20px;
   border: none;
-  background-color: #f71302;
+  background-color: #807372;
   color: #fafafa;
   font-size: 0.9rem;
 }

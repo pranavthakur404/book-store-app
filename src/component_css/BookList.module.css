@@ -1,0 +1,43 @@
+.booklistWrapper {
+  width: 100%;
+  padding: 50px 0px;
+}
+
+.bookList {
+  width: 100%;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 22% 22% 22% 22%;
+  row-gap: 20px;
+  justify-content: space-between;
+}
+
+.buttons {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0px;
+}
+
+.buttons button {
+  margin: 15px;
+  padding: 7px 20px;
+  background-color: #f71302;
+  border: none;
+  color: white;
+}
+
+.loading {
+  width: 100%;
+  text-align: center;
+}
+
+.loading img {
+  width: 100px;
+}
+
+.notFoundText {
+  width: 100%;
+  text-align: center;
+  font-size: 9rem;
+  padding-top: 83px;
+}
