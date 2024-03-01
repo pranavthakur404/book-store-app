@@ -5,9 +5,16 @@ import SearchBooks from "./SearchBooks";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../context/CartContext";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
   const { cartList } = useCartContext();
+
+  const handleCartBtn = () => {
+    navigate("/cart");
+  };
+
   return (
     <header className={styles.header}>
       <Container>
@@ -21,7 +28,7 @@ const Header = () => {
             <p>
               <Link>FAQ</Link>
             </p>
-            <button className={styles.cartButton}>
+            <button onClick={handleCartBtn} className={styles.cartButton}>
               <FaShoppingCart className={styles.cartIcon} />
               {cartList.length > 0 && (
                 <span className={styles.cartCounting}>{cartList.length}</span>

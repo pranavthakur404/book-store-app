@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { About, Categories, Contact, Home, Details } from "./pages";
+import { About, Categories, Contact, Home, Details, CartPage } from "./pages";
 import CartContext from "./context/CartContext.jsx";
 
 const router = createBrowserRouter([
@@ -30,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "/details/:id",
         element: <Details />,
+      },
+      {
+        path: "/cart",
+        element: <CartPage />,
       },
     ],
   },

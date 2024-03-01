@@ -18,7 +18,7 @@ const Books = ({ image, isbn13, price, subtitle, title, url }) => {
         image: image,
         price: price,
         title: title,
-        quantity: 0,
+        quantity: 1,
       };
       addCartItem(newObj);
     }

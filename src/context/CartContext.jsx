@@ -8,6 +8,37 @@ const CartContext = ({ children }) => {
       console.log("add called");
       return [...cartList, payload];
     }
+
+    if (type == "DELETE") {
+      return cartList.filter((list) => {
+        return list.isbn13 !== payload;
+      });
+    }
+
+    if (type == "INC_QUANT") {
+      return cartList.map((list) => {
+        if (list.isbn13 == payload) {
+          return { ...list, quantity: list.quantity + 1 };
+        } else {
+          return { ...list };
+        }
+      });
+    }
+
+    if (type == "DEC_QUANT") {
+      return cartList.map((list) => {
+        if (list.isbn13 == payload) {
+          if (list.quantity > 1) {
+            return { ...list, quantity: list.quantity - 1 };
+          } else {
+            return { ...list };
+          }
+        } else {
+          return { ...list };
+        }
+      });
+    }
+
     return cartList;
   };
 

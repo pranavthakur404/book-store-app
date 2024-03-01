@@ -1,0 +1,50 @@
+.CartItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 15px;
+}
+
+.CartItem img {
+  width: 150px;
+  height: 150px;
+}
+
+.quantContainer {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.quantContainer button {
+  background: none;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.price {
+  font-size: 1.1rem;
+}
+
+.quantContainer h4 {
+  font-size: 1.1rem;
+}
+
+.deleteBtn {
+  background: none;
+  font-size: 1.6rem;
+  border: none;
+  color: red;
+  cursor: pointer;
+}
+
+.title a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 700;
+}
