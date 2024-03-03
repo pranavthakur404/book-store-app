@@ -5,7 +5,6 @@ const cartContext = createContext();
 const CartContext = ({ children }) => {
   const reducer = (cartList, { type, payload }) => {
     if (type == "ADD") {
-      console.log("add called");
       return [...cartList, payload];
     }
 

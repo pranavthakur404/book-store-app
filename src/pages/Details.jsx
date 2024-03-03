@@ -3,9 +3,11 @@ import useFetch from "../hooks/useFetch";
 import spinner from "../assets/Spinner-1s-200px.svg";
 import styles from "../page_css/Details.module.css";
 import Container from "../components/Container";
-import { FaStar } from "react-icons/fa";
+import { useCartContext } from "../context/CartContext";
 
 const Details = () => {
+  const { cartList, addCartItem } = useCartContext();
+
   const { id } = useParams();
 
   const { data, loading } = useFetch(
@@ -25,9 +27,28 @@ const Details = () => {
     title,
     url,
     year,
+    isbn13
   } = data;
 
-  console.log(data);
+  const handleClick = () => {
+    let check = true;
+    cartList.forEach((list) => {
+      if (list.isbn13 == isbn13) {
+        alert("Item already Added");
+        check = false;
+      }
+    });
+    if (check) {
+      const newObj = {
+        isbn13: isbn13,
+        image: image,
+        price: price,
+        title: title,
+        quantity: 1,
+      };
+      addCartItem(newObj);
+    }
+  };
 
   return (
     <Container>
@@ -43,13 +64,13 @@ const Details = () => {
             <p>Year : {year}</p>
             <p>{price}</p>
             <div>
-            <Link to={url} className={styles.buyBtn}>
-              Buy
-            </Link>
-            <button className={styles.cartBtn}>Add to Cart</button>
+              <Link to={url} className={styles.buyBtn}>
+                Buy
+              </Link>
+              <button onClick={handleClick} className={styles.cartBtn}>
+                Add to Cart
+              </button>
             </div>
-            
-
           </div>
           <div className={styles.info}>
             <p>

@@ -3,8 +3,18 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { About, Categories, Contact, Home, Details, CartPage } from "./pages";
+import {
+  About,
+  Categories,
+  Contact,
+  Home,
+  Details,
+  CartPage,
+  Login,
+} from "./pages";
 import CartContext from "./context/CartContext.jsx";
+import AuthProvider from "./context/AuthProvider.jsx";
+import Auth from "./components/Auth.jsx";
 
 const router = createBrowserRouter([
   {
@@ -13,34 +23,64 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />,
+        element: (
+          <Auth>
+            <Home />
+          </Auth>
+        ),
       },
       {
         path: "/about",
-        element: <About />,
+        element: (
+          <Auth>
+            <About />
+          </Auth>
+        ),
       },
       {
         path: "/categories",
-        element: <Categories />,
+        element: (
+          <Auth>
+            <Categories />
+          </Auth>
+        ),
       },
       {
         path: "/contact",
-        element: <Contact />,
+        element: (
+          <Auth>
+            <Contact />
+          </Auth>
+        ),
       },
       {
         path: "/details/:id",
-        element: <Details />,
+        element: (
+          <Auth>
+            <Details />
+          </Auth>
+        ),
       },
       {
         path: "/cart",
-        element: <CartPage />,
+        element: (
+          <Auth>
+            <CartPage />
+          </Auth>
+        ),
+      },
+      {
+        path: "/login",
+        element: <Login />,
       },
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <CartContext>
-    <RouterProvider router={router} />
-  </CartContext>
+  <AuthProvider>
+    <CartContext>
+      <RouterProvider router={router} />
+    </CartContext>
+  </AuthProvider>
 );

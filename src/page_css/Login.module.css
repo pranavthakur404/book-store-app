@@ -1,0 +1,13 @@
+.loginContainer {
+  width: 100%;
+  text-align: center;
+  padding: 5% 0%;
+}
+
+.loginContainer button {
+  padding: 7px 20px;
+  background: green;
+  color: #ffff;
+  border: none;
+  font-size: 1.2rem;
+}

@@ -6,13 +6,19 @@ import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../context/CartContext";
 import { useNavigate } from "react-router-dom";
+import { useAuthContext } from "../context/AuthProvider";
 
 const Header = () => {
+  const { login, setIsLogin } = useAuthContext();
   const navigate = useNavigate();
   const { cartList } = useCartContext();
 
   const handleCartBtn = () => {
     navigate("/cart");
+  };
+
+  const handleLogout = () => {
+    setIsLogin(false);
   };
 
   return (
@@ -34,7 +40,9 @@ const Header = () => {
                 <span className={styles.cartCounting}>{cartList.length}</span>
               )}
             </button>
-            <button className="primary-btn">Sign in</button>
+            <button className="primary-btn" onClick={handleLogout}>
+              Logout
+            </button>
           </div>
         </div>
       </Container>
