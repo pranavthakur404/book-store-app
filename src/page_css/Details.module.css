@@ -49,3 +49,10 @@
   color: white;
   margin-inline: 10px;
 }
+
+@media only screen and (max-width: 575px) {
+  .detailsWrapper {
+    flex-direction: column;
+    column-gap: 20px;
+  }
+}

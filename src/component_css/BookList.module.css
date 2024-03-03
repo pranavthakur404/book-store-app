@@ -42,3 +42,22 @@
   font-size: 9rem;
   padding-top: 83px;
 }
+
+/* media query */
+@media only screen and (max-width: 920px) {
+  .bookList {
+    grid-template-columns: 32% 32% 32%;
+  }
+}
+
+@media only screen and (max-width: 676px) {
+  .bookList {
+    grid-template-columns: 49% 49%;
+  }
+}
+
+@media only screen and (max-width: 474px) {
+  .bookList {
+    grid-template-columns: 100%;
+  }
+}
